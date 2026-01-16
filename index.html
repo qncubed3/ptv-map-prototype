@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PTV Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Mapbox GL JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.14.0/mapbox-gl.js"></script>
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v3.14.0/mapbox-gl.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Ensure the map fills the viewport */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Floating dropdown on top of the map */
+    /* #route-selector {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10; /* above map canvas */
+      padding: 5px 10px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px; */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Map container -->
+  <div id="map"></div>
+  <!-- Side panel -->
+  <div id="side-panel" class="side-panel">
+    <button id="close-panel">&times;</button>
+    <div id="panel-content"></div>
+  </div>
+
+
+  <!-- Custom JS -->
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  font-family: sans-serif;
+}
+.mapboxgl-popup-tip {
+    display: none !important;
+}
+
+.mapboxgl-popup-content {
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+/* Remove default popup tip */
+.mapboxgl-popup-tip {
+    display: none !important;
+}
+
+/* Remove the default popup tip */
+.mapboxgl-popup-tip {
+    display: none !important;
+}
+
+.mapboxgl-popup-content {
+    border-radius: 8px !important;
+    padding: 0 !important; /* remove default padding */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* Header inside the popup */
+.popup-header {
+    background-color: #000000; 
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+/* Body inside the popup */
+.popup-body {
+    background-color: white;
+    padding: 8px 12px;
+    color: #333;
+    font-size: 12px;
+}
+.side-panel {
+  position: fixed;
+  top: 0;
+  left: -500px;  /* 480 is similar to google*/
+  width: 500px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);  /* shadow on the right edge */
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+.side-panel.open {
+  left: 0;  /* slide in */
+}
+
+.side-panel button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#panel-content {
+  padding: 10px;
+}
